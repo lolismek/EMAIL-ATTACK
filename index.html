@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> EMAIL ATTACK </title>
+    <link rel="stylesheet" href="styles1.css">
+  </head>
+  <body>
+    <div id="main">
+      <p id="main_text"> EMAIL ATTACK! </p>
+      <input id="password_input" type="password" value=""/>
+      <button id="button-submit" onclick="handle_password()">submit password</button>
+
+      <script type="text/javascript">
+        function handle_password(){
+          var input = document.getElementById("password_input").value;
+          var text_p = document.getElementById("main_text");
+          if(input == "geanina123"){
+            document.body.style.backgroundColor = "green";
+            text_p.innerHTML = "LOADING...";
+            setTimeout(function(){
+              window.location.href = "attack.html";
+            }, 500)
+          }else{
+            document.body.style.backgroundColor = "red";
+            text_p.innerHTML = "INCORRECT PASSWORD!!!";
+            setTimeout(function(){
+              document.body.style.backgroundColor = "black";
+              text_p.innerHTML = "EMAIL ATTACK";
+            }, 500)
+          }
+        }
+      </script>
+
+    </div>
+  </body>
+</html>

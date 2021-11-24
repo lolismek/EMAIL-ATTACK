@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+#main{
+  font-family: Asap, sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  margin-top: 15%;
+}
+
+#password_input{
+  font-size: 50px;
+  border-radius: 20px;
+}
+
+#button-submit{
+  font-family: Asap, sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+}

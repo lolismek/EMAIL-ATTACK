@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EMAIL ATTACK</title>
+    <meta charset="utf-8">
+    <script src= "https://smtpjs.com/v3/smtp.js"> </script>
+    <link rel="stylesheet" href="styles2.css">
+  </head>
+  <body>
+      <header>
+        <h1> EMAIL ATTACK! <h1>
+        <p> <small> Attack someone now, without hesitaition, using the webs most powerfull email spamming tool! No one will ever mess with you again! </small> </p>
+      </header>
+
+      <div id="main">
+        <input id="reciever_email" placeholder="Who do you wish to attack?(email)">
+        <br><br>
+        <input id="attack_subject" placeholder="What's the subject of your attack?">
+        <br><br>
+        <textarea id="message" placeholder="What's the message of your attack?" name="name" rows="8" cols="80"></textarea>
+        <br><br>
+        <p id="q"> From 1 to 100, what is the scale of your attack? </p>
+        <input id="range_attack" type="range">
+        <button onclick="email_attack()" id="button1"> ATTACK! </button>
+      </div>
+      <p id="oop"><small><i>By using this product, you agree that you are fully responsible of the consequences.</i></small></p>
+      <script type="text/javascript">
+        function sendEmail() {
+          var reciever = document.getElementById("reciever_email").value;
+          var content = document.getElementById("message").value;
+          var subject_txt = document.getElementById("attack_subject").value;
+          Email.send({
+            Host: "smtp.gmail.com",
+            Username: "send.mail.geanina",
+            Password: "QwErAs12.",
+            To: reciever,
+            From: "send.mail.geanina@gmail.com",
+            Subject: subject_txt,
+            Body: content,
+          })
+            .then(function (message) {
+              alert("Succesfull attack :) ")
+            });
+          }
+
+          function email_attack(){
+            var slider_val = document.getElementById("range_attack").value;
+            document.body.style.backgroundColor = "red";
+            setTimeout(function(){
+              document.body.style.backgroundColor = "black";
+            }, 50)
+            for(let i = 0; i < slider_val; i++){
+              sendEmail();
+            }
+
+          }
+        </script>
+
+  </body>
+</html>

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+header{
+  font-family: Asap, sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#main{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+#reciever_email{
+  font-size: 40px;
+}
+
+#attack_subject{
+  font-size: 40px;
+}
+
+#message{
+  font-size: 40px;
+}
+
+#q{
+  font-size: 40px;
+  color: white;
+}
+
+#range_attack{
+  font-size: 40px;
+}
+
+#oop{
+  margin-top: 100px;
+  color: white;
+}
